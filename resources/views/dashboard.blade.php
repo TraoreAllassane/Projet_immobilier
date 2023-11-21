@@ -1,11 +1,11 @@
-<html lang="en">
+<html lang="FR-fr">
  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.104.2">
-    <title _msttexthash="2307890" _msthash="0">Exemple d’album · Amorçage v5.2</title>
+    <title _msttexthash="2307890" _msthash="0">Ivoire Immo</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
 
@@ -85,7 +85,7 @@
   <body>
     
 <header>
-  <div class="collapse bg-dark" id="navbarHeader" _msthidden="6">
+  <div class="collapse bg-primary" id="navbarHeader" _msthidden="6">
     <div class="container" _msthidden="6">
       <div class="row" _msthidden="6">
         <div class="col-sm-8 col-md-7 py-4" _msthidden="2">
@@ -103,11 +103,11 @@
       </div>
     </div>
   </div>
-  <div class="navbar navbar-dark bg-dark shadow-sm">
+  <div class="navbar navbar-dark bg-primary shadow-sm">
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-        <strong _msttexthash="59410" _msthash="7">Album</strong>
+        <strong _msttexthash="59410" _msthash="7">IVOIRE-IMMO</strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Basculer la navigation" _mstaria-label="320099" _msthash="8">
         <span class="navbar-toggler-icon"></span>
@@ -121,11 +121,10 @@
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light" _msttexthash="1839409" _msthash="9">Exemple d’album</h1>
-        <p class="lead text-muted" _msttexthash="36162893" _msthash="10">Quelque chose de bref et de suggestif à propos de la collection ci-dessous - son contenu, le créateur, etc. Faites en sorte qu’il soit court et doux, mais pas trop court pour que les gens ne le sautent pas complètement.</p>
+        <h1 class="fw-light" _msttexthash="1839409" _msthash="9">Bienvenue sur Ivoire immobilier</h1>
+        <p class="lead text-muted" _msttexthash="36162893" _msthash="10">Depuis plus de 5 ans , nous sommes sur le territoire ivoirien , vous avons permis à <span class="text-primary">+50 000 personnes</span> d'avoir une demeure selon leurs preferences</p>
         <p>
-          <a href="#" class="btn btn-primary my-2" _msttexthash="3027362" _msthash="11">Principal appel à l’action</a>
-          <a href="#" class="btn btn-secondary my-2" _msttexthash="315653" _msthash="12">Action secondaire</a>
+          <a href="#" class="btn btn-primary my-2" _msttexthash="3027362" _msthash="11">Voir tous les biens dispo</a>
         </p>
       </div>
     </div>
@@ -142,12 +141,14 @@
           <img src="{{ Storage::url($bien->image) }}" alt="" srcset="" width="100%" height="225" >
 
           <div class="card-body">
-            <p class="card-text" _msttexthash="23562383" _msthash="16">Il s’agit d’une carte plus large avec un texte d’accompagnement ci-dessous comme une introduction naturelle à du contenu supplémentaire. Ce contenu est un peu plus long.</p>
+            <p class="card-text" _msttexthash="23562383" _msthash="16">{{ $bien->description }} situé(e) à {{ $bien->adresse }}</p>
+            <p class="card-text text-primary" _msttexthash="23562383" _msthash="16">{{ $bien->prix }} fcfa</p>
             <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="31811" _msthash="17">Vue</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary" _msttexthash="88283" _msthash="18">Éditer</button>
-              </div>
+              
+                <a href="" class="btn btn-warning"><i class="fa-solid fa-eye"></i> Voir</a>
+                <a href="" class="btn btn-primary">Reservervation</a>
+                
+              
               <small class="text-muted" _msttexthash="115934" _msthash="19">9 minutes</small>
             </div>
           </div>
