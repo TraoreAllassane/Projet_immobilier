@@ -17,6 +17,13 @@ class visiteurController extends Controller
         return view('dashboard', ['biens' => $biens]);
     }
 
+    public function TousLesBiens()
+    {
+        $biens = Biens::all();
+
+        return view('tousLesBiens', ['biens' => $biens]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
