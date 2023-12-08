@@ -37,15 +37,16 @@ class visiteurController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show( $id)
     {
-        //
+        $bien = Biens::find($id);
+        return view('bien', ['bien' => $bien]);
     }
 
     /**

@@ -133,43 +133,42 @@
 
 <main>
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light" _msttexthash="1839409" _msthash="9">Bienvenue sur Ivoire immobilier</h1>
-        <p class="lead text-muted" _msttexthash="36162893" _msthash="10">Depuis plus de 5 ans , nous sommes sur le territoire ivoirien , vous avons permis à <span class="text-primary">+50 000 personnes</span> d'avoir une demeure selon leurs preferences</p>
-        <p>
-          <a href="{{ route('tousLesBien') }}" class="btn btn-primary my-2" _msttexthash="3027362" _msthash="11">Voir tous les biens dispo</a>
-        </p>
-      </div>
-    </div>
-  </section>
+  
 
   <div class="album py-5 bg-light">
     <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        
-       @foreach ($biens as $bien)
-       <div class="col">
-        <div class="card shadow-sm">
-          <img src="{{ Storage::url($bien->image) }}" alt="" srcset="" width="100%" height="225" >
-
-          <div class="card-body">
-            <p class="card-text" _msttexthash="23562383" _msthash="16">{{ $bien->description }} situé(e) à {{ $bien->adresse }}</p>
-            <p class="card-text text-primary" _msttexthash="23562383" _msthash="16">{{ $bien->prix }} fcfa</p>
-            <div class="d-flex justify-content-between align-items-center">
-              
-                <a href="{{ route('bien.show', $bien->id) }}" class="btn btn-warning"><i class="fa-solid fa-eye"></i> Voir</a>
-                <a href="" class="btn btn-primary">Reservervation</a>
-                
-              
-              
+        <h3 style="text-align: center" class="mb-3">Informations sur {{ $bien->titre }}</h3>
+        <div class="row">
+            <div class="col-md-8">
+               <img src="{{ Storage::url($bien->image) }}" alt="" width="100%" height="75%">
+               <a href="{{ route('dashboard') }}" class="btn btn-primary mt-3 btn-block">Retour</a>
             </div>
-          </div>
+            <div class="col-md-4">
+                <h6 class="text-primary">Description</h6>
+                <hr>
+                <p>{{ $bien->description }}</p>
+
+                <h6 class="text-primary">Addresse</h6>
+                <hr>
+                <p>{{ $bien->adresse }}</p>
+
+                <h6 class="text-primary">Nombre de chambre</h6>
+                <hr>
+                <p>{{ $bien->nb_chambre }} chambre(s)</p>
+
+                <h6 class="text-primary">Superficie</h6>
+                <hr>
+                <p>{{ $bien->superficie }}</p>
+
+                <h6 class="text-primary">prix</h6>
+                <hr>
+                <p>{{ $bien->prix }} fcfa</p>
+                <a href="" style="text-align: center" class="btn  btn-primary btn-lg btn-block" >Reservation</a>
+            </div>
         </div>
-      </div>
-       @endforeach
+        
+      
         
 
 

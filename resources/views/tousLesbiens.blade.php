@@ -133,17 +133,7 @@
 
 <main>
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light" _msttexthash="1839409" _msthash="9">Bienvenue sur Ivoire immobilier</h1>
-        <p class="lead text-muted" _msttexthash="36162893" _msthash="10">Depuis plus de 5 ans , nous sommes sur le territoire ivoirien , vous avons permis à <span class="text-primary">+50 000 personnes</span> d'avoir une demeure selon leurs preferences</p>
-        <p>
-          <a href="{{ route('tousLesBien') }}" class="btn btn-primary my-2" _msttexthash="3027362" _msthash="11">Voir tous les biens dispo</a>
-        </p>
-      </div>
-    </div>
-  </section>
+  
 
   <div class="album py-5 bg-light">
     <div class="container">
