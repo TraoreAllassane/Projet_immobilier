@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\reservationController;
 use App\Http\Controllers\visiteurController;
 use Illuminate\Support\Facades\Route;
 
@@ -28,6 +29,8 @@ Route::middleware('admin')->group(function () {
   Route::get('/admin/{id}/delete', [AdminController::class, 'delete'])->name('admin.delete');
   Route::post('/admin/save', [AdminController::class, 'store'])->name('admin.nouveau');
 
+ 
+
 });
 
 Route::middleware('auth')->group(function () {
@@ -37,6 +40,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Les routes de la reservation 
+    Route::get('/reservation', [reservationController::class , 'index'])->name("reservation.index");
 });
 
 
